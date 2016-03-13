@@ -6,18 +6,12 @@ import java.util.*;
  * Created by Ксения on 3/13/2016.
  */
 public class Hedgehog {
-    private String name;
-    private int age;
+    private Nose nose;
 
-    public void setName(String name) {
-        System.out.println("Hedgehog.setName");
-        this.name = name;
-        System.out.println("name = " + name);
-    }
-
-    public void setAge(int age) {
-        System.out.println("Hedgehog.setAge");
-        this.age = age;
-        System.out.println("age = " + age);
+    public void setNose(Nose nose) {
+        this.nose = nose;
+        System.out.println("Hedgehog.setNose");
+        System.out.println("nose = " + nose);
+        System.out.println("this = " + this);
     }
 }

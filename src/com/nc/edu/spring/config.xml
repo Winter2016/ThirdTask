@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="hedgehog" class="com.nc.edu.spring.Hedgehog">
-        <property name="name" value="#{T(com.nc.edu.spring.SimpleConfig).getName()}"/>
-        <property name="age" value="#{T(com.nc.edu.spring.SimpleConfig).getAge()}"/>
+        <property name="nose" ref="nose"/>
     </bean>
+    <bean id="nose" class="com.nc.edu.spring.Nose"/>
 </beans>
