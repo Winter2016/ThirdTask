@@ -4,9 +4,29 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="hedgehog" class="com.nc.edu.spring.Hedgehog">
-      <property name="nose" ref="nose"/>
-        <property name="age" value="3"/>
+        <constructor-arg name="needles">
+            <list>
+              <ref bean="needle1"/>
+              <ref bean="needle2"/>
+            </list>
+        </constructor-arg>
+        <constructor-arg name="childrenNames">
+            <set>
+                <value>Vasya</value>
+                <value>Petya</value>
+                <value>Evdokiya</value>
+                <value>Vasya</value>
+            </set>
+        </constructor-arg>
+        <constructor-arg name="familyNames">
+            <map>
+                <entry key="father" value="Petr"/>
+                <entry key="mother" value="Antonina"/>
+                <entry key="brother" value="Anton"/>
+            </map>
+        </constructor-arg>
     </bean>
-    <bean id="nose" class="com.nc.edu.spring.Nose"></bean>
+<bean id="needle1" class="com.nc.edu.spring.Needle"/>
+<bean id="needle2" class="com.nc.edu.spring.Needle"/>
 
 </beans>
