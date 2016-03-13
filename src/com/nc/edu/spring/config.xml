@@ -4,27 +4,27 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="hedgehog" class="com.nc.edu.spring.Hedgehog">
-        <constructor-arg name="needles">
+        <property name="needles">
             <list>
               <ref bean="needle1"/>
               <ref bean="needle2"/>
             </list>
-        </constructor-arg>
-        <constructor-arg name="childrenNames">
+        </property>
+        <property name="childrenNames">
             <set>
                 <value>Vasya</value>
                 <value>Petya</value>
                 <value>Evdokiya</value>
                 <value>Vasya</value>
             </set>
-        </constructor-arg>
-        <constructor-arg name="familyNames">
+        </property>
+        <property name="familyNames">
             <map>
                 <entry key="father" value="Petr"/>
                 <entry key="mother" value="Antonina"/>
                 <entry key="brother" value="Anton"/>
             </map>
-        </constructor-arg>
+        </property>
     </bean>
 <bean id="needle1" class="com.nc.edu.spring.Needle"/>
 <bean id="needle2" class="com.nc.edu.spring.Needle"/>

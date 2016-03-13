@@ -11,12 +11,21 @@ public class Hedgehog {
     private Set<String> childrenNames;
     private Map<String, String> familyNames;
 
-    public Hedgehog(List<Needle> needles,Set<String> childrenNames, Map<String,String> familyNames) {
+    public void setNeedles(List<Needle> needles) {
         this.needles = needles;
-        this.childrenNames = childrenNames;
-        System.out.println("Hedgehog.Hedgehog");
+        System.out.println("Hedgehog.setNeedles");
         System.out.println("needles = " + needles);
+    }
+
+    public void setChildrenNames(Set<String> childrenNames) {
+        this.childrenNames = childrenNames;
+        System.out.println("Hedgehog.setChildrenNames");
         System.out.println("childrenNames = " + childrenNames);
+    }
+
+    public void setFamilyNames(Map<String, String> familyNames) {
+        this.familyNames = familyNames;
+        System.out.println("Hedgehog.setFamilyNames");
         System.out.println("familyNames = " + familyNames);
     }
 }
