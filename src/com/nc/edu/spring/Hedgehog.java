@@ -6,12 +6,18 @@ import java.util.*;
  * Created by Ксения on 3/13/2016.
  */
 public class Hedgehog {
+    private String name;
+    private int age;
 
-    private Map<String, String> familyNames;
+    public void setName(String name) {
+        System.out.println("Hedgehog.setName");
+        this.name = name;
+        System.out.println("name = " + name);
+    }
 
-    public void setFamilyNames(Map<String, String> familyNames) {
-        this.familyNames = familyNames;
-        System.out.println("Hedgehog.setFamilyNames");
-        System.out.println("familyNames = " + familyNames);
+    public void setAge(int age) {
+        System.out.println("Hedgehog.setAge");
+        this.age = age;
+        System.out.println("age = " + age);
     }
 }

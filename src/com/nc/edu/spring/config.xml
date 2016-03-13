@@ -3,22 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="hedgehog" abstract="true" class="com.nc.edu.spring.Hedgehog">
-        <property name="familyNames">
-            <map>
-                <entry key="father" value="Petr"/>
-                <entry key="mother" value="Antonina"/>
-                <entry key="brother" value="Anton"/>
-            </map>
-        </property>
+    <bean id="hedgehog" class="com.nc.edu.spring.Hedgehog">
+        <property name="name" value="#{T(com.nc.edu.spring.SimpleConfig).getName()}"/>
+        <property name="age" value="#{T(com.nc.edu.spring.SimpleConfig).getAge()}"/>
     </bean>
-<bean id="childHedgehog" parent="hedgehog">
-    <property name="familyNames">
-        <map merge="true">
-            <entry key="father" value="Vasily"/>
-            <entry key="sister" value="Assol"/>
-        </map>
-    </property>
-</bean>
-
 </beans>
