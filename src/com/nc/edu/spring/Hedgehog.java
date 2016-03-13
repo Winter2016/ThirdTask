@@ -8,7 +8,7 @@ import java.util.*;
 public class Hedgehog {
     private Nose nose;
 
-    public void setNose(Nose nose) {
+    public Hedgehog(Nose nose) {
         this.nose = nose;
         System.out.println("Hedgehog.setNose");
         System.out.println("nose = " + nose);
