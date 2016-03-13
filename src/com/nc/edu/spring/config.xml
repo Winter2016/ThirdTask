@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="hedgehog" class="com.nc.edu.spring.Hedgehog">
-        <constructor-arg ref="nose"/>
-        <constructor-arg type="int" value="2"/>
+      <property name="nose" ref="nose"/>
+        <property name="age" value="3"/>
     </bean>
     <bean id="nose" class="com.nc.edu.spring.Nose"></bean>
 
