@@ -3,21 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="hedgehog" class="com.nc.edu.spring.Hedgehog">
-        <property name="needles">
-            <list>
-              <ref bean="needle1"/>
-              <ref bean="needle2"/>
-            </list>
-        </property>
-        <property name="childrenNames">
-            <set>
-                <value>Vasya</value>
-                <value>Petya</value>
-                <value>Evdokiya</value>
-                <value>Vasya</value>
-            </set>
-        </property>
+    <bean id="hedgehog" abstract="true" class="com.nc.edu.spring.Hedgehog">
         <property name="familyNames">
             <map>
                 <entry key="father" value="Petr"/>
@@ -26,7 +12,13 @@
             </map>
         </property>
     </bean>
-<bean id="needle1" class="com.nc.edu.spring.Needle"/>
-<bean id="needle2" class="com.nc.edu.spring.Needle"/>
+<bean id="childHedgehog" parent="hedgehog">
+    <property name="familyNames">
+        <map merge="true">
+            <entry key="father" value="Vasily"/>
+            <entry key="sister" value="Assol"/>
+        </map>
+    </property>
+</bean>
 
 </beans>
