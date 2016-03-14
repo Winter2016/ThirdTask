@@ -5,7 +5,27 @@ import java.util.*;
 /**
  * Created by Ксения on 3/13/2016.
  */
-public abstract class Hedgehog {
-    private Nose nose = new Nose();
-    protected abstract Nose createNose();
+public class Hedgehog {
+    private String name;
+    private int age;
+
+    public void setName(String name) {
+        System.out.println("Hedgehog.setName");
+        this.name = name;
+        System.out.println("name = " + name);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setAge(int age) {
+        System.out.println("Hedgehog.setAge");
+        this.age = age;
+        System.out.println("age = " + age);
+    }
+
+    public int getAge() {
+        return age;
+    }
 }

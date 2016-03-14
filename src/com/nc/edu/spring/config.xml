@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="hedgehog" class="com.nc.edu.spring.Hedgehog">
-        <lookup-method name="createNose" bean="nose"/>
-    </bean>
-    <bean id="nose" factory-bean="hedgehog" factory-method="createNose" scope="prototype"/>
+    <bean id="simpleConfig" class="com.nc.edu.spring.SimpleConfig"/>
+
+    <bean id="hedgehog" class="com.nc.edu.spring.Hedgehog"
+          p:name="#{simpleConfig.name}"
+          p:age="#{simpleConfig.age}"/>
+
 </beans>
